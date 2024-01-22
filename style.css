@@ -1,0 +1,261 @@
+:root {
+  --seekbg: rgba(0, 0, 0, 0.207);
+  --bgurl:url(https://cdn.pixabay.com/photo/2017/08/07/16/39/girl-2605526_1280.jpg) center center/cover ;
+  --clr:#A0B6BC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: var(--clr);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  color: var(--clr);
+  overflow: hidden;
+  background:var(--bgurl);
+  backdrop-filter: blur(14px);
+}
+header {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--clr);
+  font-family: gilroy;
+  font-weight: bold;
+}
+
+.songHeadings {
+  color: var(--clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+.albumHead {
+  font-size: 0.67rem;
+  color: var(--clr);
+}
+
+.albumName {
+  color: var(--clr);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+header > span,
+header > a {
+  font-weight: bold;
+  color: var(--clr);
+  font-size: 1rem;
+}
+header > span:active,
+header > a:active,
+.lyricsBox a:active,
+.details > span:active,
+.playDot:active,
+.playStuff span:active,
+.playStuff i:active {
+  scale: 1.15;
+  /* transform: rotate(5deg); */
+}
+.coverImg {
+  background: linear-gradient(45deg, royalblue, deeppink);
+  height: 50%;
+  width: 96%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+.coverImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lyricsBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.lyricsBox h2 {
+  font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0.6rem;
+}
+
+.lyricsBox a {
+  margin: 5px 4px;
+  color: var(--clr);
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: 0.6px solid white;
+}
+
+.details {
+  color: var(--clr);
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.song_artist {
+  color: var(--clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.songName {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+.artistName {
+  font-size: 0.67rem;
+}
+.details > span {
+  font-weight: bold;
+}
+.seek {
+  width: 100%;
+  padding: 15px;
+  margin: 1rem 0rem;
+}
+.seekBar {
+  width: 100%;
+  height: 2.5px;
+  border: none;
+  border-radius: 8px;
+  background: var(--seekbg);
+  position: relative;
+}
+.playDot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: black;
+  /* background: var(--seekbg); */
+  position: relative;
+  top: -4px;
+}
+.seekTime {
+  width: 100%;
+  padding: 3px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.seekTime span {
+  font-size: 0.6rem;
+  font-family: monospace;
+}
+.playStuff {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.38rem;
+}
+.playStuff span {
+  padding: 2px;
+  color: var(--clr);
+}
+.centerPlay {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap:2%; */
+}
+.playBtn {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--seekbg);
+  overflow: hidden;
+}
+.playBtn i {
+  object-fit: contain;
+}
+@media (min-width: 750px) {
+  .songHeadings {
+    font-size: 1.2rem;
+  }
+  .albumHead {
+    font-size: 1.1rem;
+  }
+  .albumName {
+    font-size: 1.2rem;
+  }
+  header > span,
+  header > a {
+    font-size: 1.4rem;
+  }
+  .coverImg {
+    height: 48%;
+  }
+  .lyricsBox h2 {
+    font-size: 1.9rem;
+  }
+  .lyricsBox a {
+    font-size: 1.2rem;
+  }
+  .details {
+    margin: 0;
+  }
+  .details > span {
+    font-size: 1.57rem;
+    font-weight: 100;
+  }
+  .songName {
+    font-size: 1.45rem;
+  }
+  .artistName {
+    font-size: 1.17rem;
+  }
+  .seek {
+    margin: 0.6rem 0rem;
+  }
+  .seekBar {
+    height: 3px;
+  }
+  .playDot {
+    width: 12px;
+    height: 12px;
+    top: -5.5px;
+  }
+  .seekTime span {
+    font-size: 1rem;
+  }
+  .playStuff {
+    font-size: 1.78rem;
+    margin-top: 0rem;
+  }
+  .playBtn {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
