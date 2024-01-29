@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PLAYING FROM - HEAVEN</title>
+    <title>PLAYING FROM - HELL</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -19,7 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="web icon" href="/images/webIcon.PNG" />
+    <link rel="web icon" href="./media/images/webIcon.PNG" />
   </head>
   <body>
     <header>
@@ -50,11 +50,9 @@
       </div>
       <span class="listIcon"><i class="ri-play-list-fill"></i></span>
     </div>
-
+   <audio src="/media/audio/Young Age Billa Sonipat Ala 128 Kbps.mp3" class="song"></audio>
     <div class="seek">
-      <div class="seekBar">
-        <span class="playDot"></span>
-      </div>
+      <input type="range" value="0" class="seekBar">
       <div class="seekTime">
         <span class="playTime">2:13</span>
         <span class="songTime">2:13</span>
@@ -69,10 +67,10 @@
       </span>
       <div class="centerPlay">
         <span class="preBtn"><i class="ri-skip-left-fill"></i></span>
-        <div class="playBtn play pause"
+        <button onclick="playPause()" class="playBtn play pause"
           ><i class="ri-play-fill"></i>
           <!-- <i class="ri-pause-mini-fill"></i> -->
-        </div>
+        </button>
         <span class="nextBtn"><i class="ri-skip-right-fill"></i></span>
       </div>
       <span class="shuffleBtn"><i class="ri-shuffle-line"></i></span>
@@ -81,5 +79,6 @@
       src="https://kit.fontawesome.com/5a2806fb6d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
