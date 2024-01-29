@@ -151,7 +151,7 @@ header > a:active,
   height: 10px;
   border: none;
   border-radius: 50%;
-  background: black;
+  /* background: black; */
   /* background: var(--seekbg); */
   position: relative;
   top: -4px;
@@ -190,6 +190,7 @@ header > a:active,
 .playBtn {
   width: 2.8rem;
   height: 2.8rem;
+  border:none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -198,6 +199,9 @@ header > a:active,
   overflow: hidden;
 }
 .playBtn i {
+  /* transition: all ease 1s; */
+  scale: 2.5;
+  color:var(--clr);
   object-fit: contain;
 }
 @media (min-width: 750px) {
@@ -245,7 +249,7 @@ header > a:active,
   .playDot {
     width: 12px;
     height: 12px;
-    top: -5.5px;
+    top: -10.5px;
   }
   .seekTime span {
     font-size: 1rem;
